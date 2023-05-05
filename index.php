@@ -47,6 +47,13 @@ echo "<br>Седьмое задание<br><br>";
 echo '<hr />';
 echo "<br>Восьмое задание<br><br>";
 
+$time = date("H:i:s");
+$hour = date("H");
+$minute = date("i");
+$second = date("s");
+echo $time . ' - вывод через общую функцию date()<br>';
+echo $hour . ':' . $minute . ':' . $second . ' - вывод каждой переменной отдельно<br>'; 
+
 echo '<hr />';
 echo "<br>Девятое задание<br><br>";
 
