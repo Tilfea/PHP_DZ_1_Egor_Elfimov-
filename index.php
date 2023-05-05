@@ -44,6 +44,24 @@ echo "$total<br>";
 echo '<hr />';
 echo "<br>Седьмое задание<br><br>";
 
+$hour = 2000;
+
+$total;
+for ($i = $hour; $i < date("Y"); $i++){
+    if ($i % 4 == 0){
+        $total += 31536000;
+    } else {$total += 30758400;}
+}
+$nowMonth = date("m");
+for ($i = 1; $i<$nowMonth; $i++){
+    if ($i % 2 !=0){
+        $total += 2678400;
+    } else {$total += 2592000;}
+}
+$nowDay = date("d");
+$total += (86400 * $nowDay);
+echo 'С 2000 года прошло ' . $total . 'c с учетом високосных лет';
+
 echo '<hr />';
 echo "<br>Восьмое задание<br><br>";
 
@@ -64,10 +82,16 @@ $var *= 5;<br>
 $var /= 7;<br>
 $var++;<br>
 $var--;<br>';
+$var = 1;
+$var += 12;
+$var -= 14;
+$var *= 5;
+$var /= 7;
+$var++;
+$var--;
+echo $var;
 echo '<hr />';
 echo "<br>Десятое задание<br><br>";
-
-
 
 define('family', "Елфимов");
 define('name1','Егор');
